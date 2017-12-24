@@ -1,0 +1,73 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "User Profile";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="page-header">
+            Manage Users <small>Add User</small>
+        </h1>
+    </div>
+</div>
+<!-- /. ROW  -->
+<div style="background: #fff;">
+    <div class="row">
+        <div class="">
+            <div class="col-sm-6 col-md-4">
+                <img src="/AdminCssJs/img/star.jpg" alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-sm-6 col-md-8">
+                <h4>
+                    Muhammad Hassan
+                </h4>
+                <small>
+                    <cite title="San Francisco, USA">
+                        San Francisco, USA <i class="glyphicon glyphicon-map-marker">
+                        </i>
+                    </cite>
+                </small>
+                <div>
+                    <p>
+                        <i class="glyphicon glyphicon-envelope"></i> email@example.com
+                        <br />
+                        <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com"> www.hassan.com</a>
+                        <br />
+                        <i class="glyphicon glyphicon-gift"></i> June 02, 1900
+                    </p>
+                    <p>
+                        Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem Learoum porem
+                    </p>
+                </div>
+                <!-- Split button -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ <!-- /. WRAPPER  -->
+<!-- JS Scripts-->
+<!-- jQuery Js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Bootstrap Js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Metis Menu Js -->
+<script src="/AdminCssJs/js/jquery.metisMenu.js"></script>
+<!-- DATA TABLE SCRIPTS -->
+<script src="/AdminCssJs/js/jquery.dataTables.js"></script>
+<script src="/AdminCssJs/js/dataTables.bootstrap.js"></script>
+<script>
+                $(document).ready(function () {
+                    $('#dataTables-example').dataTable();
+                });
+</script>
+<!-- DATE PICKER SCRIPTS -->
+<script src="/AdminCssJs/js/bootstrap-datepicker.js"></script>
+<script>
+        var site_url = 'http://travelx.pk/';
+        $('.datepicker').datepicker({format:'yyyy-mm-dd', autoclose:true});
+</script>
+<!-- Custom Js -->
+<script src="/AdminCssJs/js/custom-scripts.js"></script>

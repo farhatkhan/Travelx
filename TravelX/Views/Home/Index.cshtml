@@ -1,0 +1,996 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home Page";
+}
+
+@*<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SITE TITTLE -->    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Star Travel - Tour Booking Theme</title>
+    <!-- PLUGINS CSS STYLE -->
+    <link href="~/Content/PluginBootstrap/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <link href="~/Content/PluginBootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/PluginBootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/Content/PluginBootstrap/rs-plugin/css/settings.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="~/Content/PluginBootstrap/selectbox/select_option1.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/PluginBootstrap/datepicker/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/PluginBootstrap/isotope/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/PluginBootstrap/isotope/isotope.css">
+    <!-- GOOGLE FONT -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,600,700' rel='stylesheet' type='text/css'>
+    <!-- CUSTOM CSS -->
+    @*<link href="css/style.css" rel="stylesheet">*@
+    <link href="~/Content/style.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="css/colors/default.css" id="option_color">*@
+    <link href="~/Content/colors/default.css" rel="stylesheet" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="/image/png" href="/img/favicon.png" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="body-wrapper changeHeader ">
+    <div class="main-wrapper">
+        <!-- HEADER -->
+        <header>
+            <nav class="navbar navbar-default navbar-main navbar-fixed-top  lightHeader  " role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="http://travelx.pk/"></a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown singleDrop active ">
+                                <a href="http://travelx.pk/">Home</a>
+                            </li>
+                            <li class="dropdown megaDropMenu ">
+                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">packages</a>
+                                <!--
+                                                <ul class="row dropdown-menu">
+                                                  <li class="col-sm-3 col-xs-12">
+                                                    <ul class="list-unstyled">
+                                                      <li>Tour Packages Grid View</li>
+                                                      <li class=""><a href="#">Packages Sidebar Left</a></li>
+                                                      <li class=""><a href="#">Packages Sidebar Right</a></li>
+                                                      <li class=""><a href="#">Packages 3 Columns</a></li>
+                                                    </ul>
+                                                  </li>
+                                                  <li class="col-sm-3 col-xs-12">
+                                                    <ul class="list-unstyled">
+                                                      <li>Tour Packages List View</li>
+                                                      <li class=""><a href="#">Packages Sidebar Left</a></li>
+                                                      <li class=""><a href="#">Packages Sidebar Right</a></li>
+                                                      <li class=""><a href="#">Packages List</a></li>
+                                                    </ul>
+                                                  </li>
+                                                  <li class="col-sm-3 col-xs-12">
+                                                    <ul class="list-unstyled">
+                                                      <li>Single Package</li>
+                                                      <li class=""><a href="#">Single Hotel Sidebar Left</a></li>
+                                                      <li class=""><a href="#">Single Hotel Sidebar Right</a></li>
+                                                      <li class=""><a href="#">Single Hotel Fullwidth</a></li>
+                                                    </ul>
+                                                  </li>
+                                                  <li class="col-sm-3 col-xs-12">
+                                                    <ul class="list-unstyled">
+                                                      <li>Booking Steps</li>
+                                                      <li class=""><a href="#">Step 1 - Personal Info</a></li>
+                                                      <li class=""><a href="#">Step 2 - Payment Info</a></li>
+                                                      <li class=""><a href="#">Step 3 - Confirmation</a></li>
+                                                    </ul>
+                                                  </li>
+                                                </ul>
+                                              </li>
+                                -->
+                            <li class="dropdown singleDrop ">
+                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ziaraat</a>
+                                <!-- <ul class="dropdown-menu dropdown-menu-right">
+                                                  <li class=""><a href="#">About Us</a></li>
+                                                  <li class=""><a href="#">Contact Us</a></li>
+                                                  <li class="dropdown dropdown-submenu ">
+                                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Gallery <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                                    <ul class="dropdown-menu ">
+                                                      <li class=""><a href="#">Gallery Grid</a></li>
+                                                      <li class=""><a href="#">Gallery Masonry</a></li>
+                                                      <li class=""><a href="#">Photo Slider</a></li>
+                                                    </ul>
+                                                  </li>
+                                -->
+                                <!-- Destinations -->
+                                <!--
+                                                    <li class="dropdown dropdown-submenu ">
+                                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Destination Cities <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                                    <ul class="dropdown-menu dropdown-menu-left">
+                                                      <li class=""><a href="#">Destination Cities</a></li>
+                                                      <li class=""><a href="#">Single Destination</a></li>
+                                                    </ul>
+                                                  </li>
+                                                  <li><a href="#">404 Not Found</a></li>
+                                                  <li><a href="#">Coming Soon</a></li>
+                                                </ul>
+                                              </li>
+                                -->
+                            <li class="dropdown singleDrop ">
+                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
+                                <!-- <ul class="dropdown-menu dropdown-menu-right">
+                                                  <li class="dropdown dropdown-submenu">
+                                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Blog Grid View <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                                    <ul class="dropdown-menu">
+                                                      <li class=""><a href="#">Blog Grid 3 Col</a></li>
+                                                      <li class=""><a href="#">Blog Grid 2 Col</a></li>
+                                                    </ul>
+                                                  </li>
+                                                  <li class="dropdown dropdown-submenu">
+                                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Blog List View <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                                    <ul class="dropdown-menu">
+                                                      <li class=""><a href="#">Blog List Right Sidebar</a></li>
+                                                      <li class=""><a href="#">blog-list-left-sidebar.html</a></li>
+                                                      <li class=""><a href="#">Blog List Fullwidth</a></li>
+                                                    </ul>
+                                                  </li>
+                                                  <li class="dropdown dropdown-submenu">
+                                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Single Blog Post <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                                    <ul class="dropdown-menu">
+                                                      <li class=""><a href="#">Right Sidebar</a></li>
+                                                      <li class=""><a href="#">Left Sidebar</a></li>
+                                                    </ul>
+                                                  </li>
+                                                </ul>
+                                              </li>
+                                -->
+                            <li class="dropdown singleDrop ">
+                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact US</a>
+                                <!-- <ul class="dropdown-menu dropdown-menu-right">
+                                                  <li class=""><a href="#">Dashboard</a></li>
+                                                  <li class=""><a href="#">Booking</a></li>
+                                                  <li class=""><a href="#">Profile</a></li>
+                                                  <li class=""><a href="#">Settings</a></li>
+                                                  <li class=""><a href="" data-toggle="modal" data-target="#signup">Signup</a></li>
+                                                  <li class=""><a href="" data-toggle="modal" data-target="#login">Login</a></li>
+                                                </ul>
+                                              </li>
+
+                                              <li class="dropdown singleDrop ">
+                                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shortcodes</a>
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                  <li class=""><a href="#">Accordions &amp; Toggles</a></li>
+                                                  <li class=""><a href="#">Tabs &amp; Dropdowns</a></li>
+                                                  <li class=""><a href="#">Pricing Tables</a></li>
+                                                </ul>
+                                              </li>
+                                -->
+                            <li class="dropdown searchBox">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li>
+                                        <span class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search..." aria-describedby="basic-addon2">
+                                            <span class="input-group-addon" id="basic-addon2">Search</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- BANNER -->
+        <section class="bannercontainer">
+            <div class="fullscreenbanner-container">
+                <div class="fullscreenbanner">
+                    <ul>
+                        <li data-transition="parallaxvertical" data-slotamount="5" data-masterspeed="700" data-title="Slide 1">
+                            <img src="/img/home/slider/slider-01.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                            <div class="slider-caption container">
+                                <div class="tp-caption rs-caption-1 sft start"
+                                     data-hoffset="0"
+                                     data-y="270"
+                                     data-speed="800"
+                                     data-start="1000"
+                                     data-easing="Back.easeInOut"
+                                     data-endspeed="300">
+                                    Discover The Most Amazing
+                                    <span>Travel Packages</span>
+                                </div>
+                                <div class="tp-caption rs-caption-2 sft"
+                                     data-hoffset="0"
+                                     data-y="400"
+                                     data-speed="1000"
+                                     data-start="1500"
+                                     data-easing="Power4.easeOut"
+                                     data-endspeed="300"
+                                     data-endeasing="Power1.easeIn"
+                                     data-captionhidden="off">
+                                    With TravelX
+                                </div>
+                                <div class="tp-caption rs-caption-3 sft"
+                                     data-hoffset="0"
+                                     data-y="485"
+                                     data-speed="800"
+                                     data-start="2000"
+                                     data-easing="Power4.easeOut"
+                                     data-endspeed="300"
+                                     data-endeasing="Power1.easeIn"
+                                     data-captionhidden="off">
+                                    <span class="page-scroll"><a target="_blank" href="#" class="btn buttonCustomPrimary">Search Now</a></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-transition="parallaxvertical" data-slotamount="5" data-masterspeed="1000" data-title="Slide 2">
+                            <img src="/img/home/slider/slider-02.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                            <div class="slider-caption container">
+                                <div class="tp-caption rs-caption-1 sft start text-center"
+                                     data-hoffset="0"
+                                     data-x="center"
+                                     data-y="270"
+                                     data-speed="800"
+                                     data-start="1000"
+                                     data-easing="Back.easeInOut"
+                                     data-endspeed="300">
+                                    Crossing The Limits
+                                    <span>TravelX</span>
+                                </div>
+                                <div class="tp-caption rs-caption-2 sft text-center"
+                                     data-hoffset="0"
+                                     data-x="center"
+                                     data-y="400"
+                                     data-speed="1000"
+                                     data-start="1500"
+                                     data-easing="Power4.easeOut"
+                                     data-endspeed="300"
+                                     data-endeasing="Power1.easeIn"
+                                     data-captionhidden="off">
+                                    To The Next Level
+                                </div>
+                                <div class="tp-caption rs-caption-3 sft text-center"
+                                     data-hoffset="0"
+                                     data-x="center"
+                                     data-y="485"
+                                     data-speed="800"
+                                     data-start="2000"
+                                     data-easing="Power4.easeOut"
+                                     data-endspeed="300"
+                                     data-endeasing="Power1.easeIn"
+                                     data-captionhidden="off">
+                                    <span class="page-scroll"><a target="_blank" href="#" class="btn buttonCustomPrimary">Read More</a></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-transition="parallaxvertical" data-slotamount="5" data-masterspeed="700" data-title="Slide 1">
+                            <img src="/img/home/slider/slider-03.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                            <div class="slider-caption container">
+                                <div class="tp-caption rs-caption-1 sft start"
+                                     data-hoffset="0"
+                                     data-y="270"
+                                     data-speed="800"
+                                     data-start="1000"
+                                     data-easing="Back.easeInOut"
+                                     data-endspeed="300">
+                                    Enjoy Ultimate Freedom
+                                    <span>With TravelX</span>
+                                </div>
+                                <div class="tp-caption rs-caption-2 sft"
+                                     data-hoffset="0"
+                                     data-y="400"
+                                     data-speed="1000"
+                                     data-start="1500"
+                                     data-easing="Power4.easeOut"
+                                     data-endspeed="300"
+                                     data-endeasing="Power1.easeIn"
+                                     data-captionhidden="off">
+                                    Choose Travel Packages
+                                </div>
+                                <div class="tp-caption rs-caption-3 sft"
+                                     data-hoffset="0"
+                                     data-y="485"
+                                     data-speed="800"
+                                     data-start="2000"
+                                     data-easing="Power4.easeOut"
+                                     data-endspeed="300"
+                                     data-endeasing="Power1.easeIn"
+                                     data-captionhidden="off">
+                                    <span class="page-scroll"><a target="_blank" href="#" class="btn buttonCustomPrimary">Check Now</a></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-transition="parallaxvertical" data-slotamount="5" data-masterspeed="1000" data-title="Slide 2">
+                            <img src="/img/home/slider/slider-04.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                            <div class="slider-caption container">
+                                <div class="tp-caption rs-caption-1 sft start text-center"
+                                     data-hoffset="0"
+                                     data-x="center"
+                                     data-y="270"
+                                     data-speed="800"
+                                     data-start="1000"
+                                     data-easing="Back.easeInOut"
+                                     data-endspeed="300">
+                                    Go For Umrah Now
+                                    <span>24/7 Quick Support</span>
+                                </div>
+                                <div class="tp-caption rs-caption-2 sft text-center"
+                                     data-hoffset="0"
+                                     data-x="center"
+                                     data-y="400"
+                                     data-speed="1000"
+                                     data-start="1500"
+                                     data-easing="Power4.easeOut"
+                                     data-endspeed="300"
+                                     data-endeasing="Power1.easeIn"
+                                     data-captionhidden="off">
+                                    TravelX Always With You
+                                </div>
+                                <div class="tp-caption rs-caption-3 sft text-center"
+                                     data-hoffset="0"
+                                     data-x="center"
+                                     data-y="485"
+                                     data-speed="800"
+                                     data-start="2000"
+                                     data-easing="Power4.easeOut"
+                                     data-endspeed="300"
+                                     data-endeasing="Power1.easeIn"
+                                     data-captionhidden="off">
+                                    <span class="page-scroll"><a target="_blank" href="http://goo.gl/lXpsqr" class="btn buttonCustomPrimary">View Packages</a></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- SEARCH TOUR -->
+        <section class="darkSection">
+            <div class="container">
+                <div class="row gridResize">
+                    <div class="col-sm-3 col-xs-12">
+                        <div class="sectionTitleDouble">
+                            <p>Search</p>
+                            <h2>your <span>tours</span></h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-7 col-xs-12">
+                        <div class="row">
+                            <div class="col-sm-3 col-xs-12">
+                                <div class="searchTour">
+                                    <select name="guiest_id2" id="guiest_id2" class="select-drop">
+                                        <option value="0">Destinations</option>
+                                        <option value="1">Makkah</option>
+                                        <option value="2">Madina</option>
+                                        <option value="3">Jaddah</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-xs-12">
+                                <div class="input-group date ed-datepicker" data-provide="datepicker">
+                                    <input type="text" class="form-control" placeholder="MM/DD/YYYY">
+                                    <div class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-xs-12">
+                                <div class="input-group date ed-datepicker" data-provide="datepicker">
+                                    <input type="text" class="form-control" placeholder="MM/DD/YYYY">
+                                    <div class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-xs-12">
+                                <div class="searchTour">
+                                    <select name="guiest_id3" id="guiest_id3" class="select-drop">
+                                        <option value="0">$1000 - $2000</option>
+                                        <option value="1">$1400 - $2000</option>
+                                        <option value="2">$1600 - $2000</option>
+                                        <option value="3">$1800 - $2000</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-xs-12">
+                        <a href="#" class="btn btn-block buttonCustomPrimary">Search</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- TOP DEALS -->
+        <section class="mainContentSection packagesSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="sectionTitle">
+                            <h2><span class="lightBg">Our Top Packages</span></h2>
+                            <p>Best Packages for you</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="thumbnail deals">
+                            <img src="/img/home/deal/deal-01.jpg" alt="deal-image">
+                            <a href="#" class="pageLink"></a>
+                            <div class="discountInfo">
+                                <div class="discountOffer">
+                                    <h4>
+                                        50% <span>OFF</span>
+                                    </h4>
+                                </div>
+                                <ul class="list-inline rating homePage">
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                </ul>
+                                <ul class="list-inline duration">
+                                    <li>7 days</li>
+                                    <li>15 hrs</li>
+                                    <li>15 min</li>
+                                </ul>
+                            </div>
+                            <div class="caption">
+                                <h4><a href="#" class="captionTitle">Suspendisse Blandit</a></h4>
+                                <p>Integer purus ex, dictum nec elementum eu, tristique vel lectus. Donec rutrum lectus et pharetra egestas.</p>
+                                <div class="detailsInfo">
+                                    <h5>
+                                        <span>Start From</span>
+                                        $299
+                                    </h5>
+                                    <ul class="list-inline detailsBtn">
+                                        <li><a href="#" class="btn buttonTransparent">Details</a></li>
+                                        <li><a href='#' class="btn buttonTransparent">Book now</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="thumbnail deals">
+                            <img src="/img/home/deal/deal-02.jpg" alt="deal-image">
+                            <a href="#" class="pageLink"></a>
+                            <div class="discountInfo">
+                                <div class="discountOffer">
+                                    <h4>
+                                        Free <span>Gift</span>
+                                    </h4>
+                                </div>
+                                <ul class="list-inline rating homePage">
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                </ul>
+                                <ul class="list-inline duration">
+                                    <li>12 days</li>
+                                    <li>3 hrs</li>
+                                    <li>12 min</li>
+                                </ul>
+                            </div>
+                            <div class="caption">
+                                <h4><a href="#" class="captionTitle">Suspendisse Eros Erat</a></h4>
+                                <p>Proin convallis magna vel libero accumsan sollicitudin. Quisque dapibus vitae turpis eu magna sagittis.</p>
+                                <div class="detailsInfo">
+                                    <h5>
+                                        <span>Start From</span>
+                                        $499
+                                    </h5>
+                                    <ul class="list-inline detailsBtn">
+                                        <li><a href="#" class="btn buttonTransparent">Details</a></li>
+                                        <li><a data-toggle="modal" data-target="#inquiryModal" href="#" class="btn buttonTransparent">Inquiry</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="thumbnail deals">
+                            <img src="/img/home/deal/deal-03.jpg" alt="deal-image">
+                            <a href="#" class="pageLink"></a>
+                            <div class="discountInfo">
+                                <div class="discountOffer">
+                                    <h4>
+                                        25% <span>OFF</span>
+                                    </h4>
+                                </div>
+                                <ul class="list-inline rating homePage">
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                </ul>
+                                <ul class="list-inline duration">
+                                    <li>17 days</li>
+                                    <li>13 hrs</li>
+                                    <li>18 min</li>
+                                </ul>
+                            </div>
+                            <div class="caption">
+                                <h4><a href="#" class="captionTitle">Quisque Placerat Nunc</a></h4>
+                                <p>Vivamus eu mattis nibh. Quisque eget ipsum at odio fringilla consequat vel id erat. Suspendisse non feugiat mi.</p>
+                                <div class="detailsInfo">
+                                    <h5>
+                                        <span>Start From</span>
+                                        $399
+                                    </h5>
+                                    <ul class="list-inline detailsBtn">
+                                        <li><a href="#" class="btn buttonTransparent">Details</a></li>
+                                        <li><a href='#' class="btn buttonTransparent">Book now</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="btnArea">
+                            <a href="#" class="btn buttonTransparent">view all</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESTINATIONS -->
+        <section class="whiteSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="sectionTitle">
+                            <h2><span>Our Destinations</span></h2>
+                            <p>Where You Wanna Go</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="media destinations">
+                            <a class="media-left" href="#">
+                                <img class="media-object" src="/img/home/destination.jpg" alt="Destination">
+                            </a>
+                            <div class="media-body">
+                                <h3 class="media-heading">Choose <br>Your Destination</h3>
+                                <p>We Provide Travel Services to</p>
+                                <div class="clearfix">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-minus" aria-hidden="true"></i>Saudi Arabia</li>
+                                        <li><a href="#"><i class="fa fa-square" aria-hidden="true"></i>Makkah</a></li>
+                                        <li><a href="#"><i class="fa fa-square" aria-hidden="true"></i>Madinah</a></li>
+                                        <li><a href="#"><i class="fa fa-square" aria-hidden="true"></i>Jaddah</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-minus" aria-hidden="true"></i>Pakistan</li>
+                                        <li><a href="#"><i class="fa fa-square" aria-hidden="true"></i>Lahore</a></li>
+                                        <li><a href="#"><i class="fa fa-square" aria-hidden="true"></i>Islamabad</a></li>
+                                        <li><a href="#"><i class="fa fa-square" aria-hidden="true"></i>Karachi</a></li>
+                                    </ul>
+
+                                </div>
+                                <div class="media-btn">
+                                    <a href="#" class="btn buttonTransparent">View All</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- COUNTING PARALLAX -->
+        <section class="countUpSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="text-center">
+                            <div class="icon">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            </div>
+                            <div class="counter">179</div>
+                            <h5>Destinations</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="text-center">
+                            <div class="icon">
+                                <i class="fa fa-gift" aria-hidden="true"></i>
+                            </div>
+                            <div class="counter">48</div>
+                            <h5>tour pack</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="text-center">
+                            <div class="icon">
+                                <i class="fa fa-smile-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="counter">4562</div>
+                            <h5>happy clients</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="text-center">
+                            <div class="icon">
+                                <i class="fa fa-life-ring" aria-hidden="true"></i>
+                            </div>
+                            <div class="counter">24</div>
+                            <h5>hours support</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- TOUR PACKAGES -->
+        <section class="whiteSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="sectionTitle">
+                            <h2><span>Ziaraat</span></h2>
+                            <p>Islamic Holly Ziaraat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="filter-container isotopeFilters">
+                            <ul class="list-inline filter">
+                                <li class="active"><a href="#" data-filter="*">All Places</a></li>
+                                <li><a href="#" data-filter=".asia">Makkah</a></li>
+                                <li><a href="#" data-filter=".america">Madinah</a></li>
+                                <!-- <li><a href="#" data-filter=".africa">Africa</a></li>  -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row isotopeContainer">
+                    <div class="col-sm-4 isotopeSelector asia">
+                        <article class="">
+                            <figure>
+                                <img src="/img/home/packages/packages-1.jpg" alt="">
+                                <h4>Arafat</h4>
+                                <div class="overlay-background">
+                                    <div class="inner"></div>
+                                </div>
+
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="col-sm-4 isotopeSelector america africa">
+                        <article class="">
+                            <figure>
+                                <img src="/img/home/packages/packages-2.jpg" alt="">
+                                <h4>Maecenas Tour</h4>
+                                <div class="overlay-background">
+                                    <div class="inner"></div>
+                                </div>
+                                <div class="overlay">
+                                    <a class="fancybox-pop" href="#">
+                                        <div class="overlayInfo">
+                                            <h5>from <span>$599</span></h5>
+                                            <p><i class="fa fa-calendar" aria-hidden="true"></i>09 Feb, 2017</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="col-sm-4 isotopeSelector africa">
+                        <article class="">
+                            <figure>
+                                <img src="/img/home/packages/packages-3.jpg" alt="">
+                                <h4>Lobortis Tour</h4>
+                                <div class="overlay-background">
+                                    <div class="inner"></div>
+                                </div>
+                                <div class="overlay">
+                                    <a class="fancybox-pop" href="#">
+                                        <div class="overlayInfo">
+                                            <h5>from <span>$299</span></h5>
+                                            <p><i class="fa fa-calendar" aria-hidden="true"></i>14 Feb, 2017</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="col-sm-4 isotopeSelector asia america">
+                        <article class="">
+                            <figure>
+                                <img src="/img/home/packages/packages-4.jpg" alt="">
+                                <h4>Minah</h4>
+                                <div class="overlay-background">
+                                    <div class="inner"></div>
+                                </div>
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="col-sm-4 isotopeSelector america">
+                        <article class="">
+                            <figure>
+                                <img src="/img/home/packages/packages-5.jpg" alt="">
+                                <h4>Nullam Tour</h4>
+                                <div class="overlay-background">
+                                    <div class="inner"></div>
+                                </div>
+                                <div class="overlay">
+                                    <a class="fancybox-pop" href="#">
+                                        <div class="overlayInfo">
+                                            <h5>from <span>$199</span></h5>
+                                            <p><i class="fa fa-calendar" aria-hidden="true"></i>02 Feb, 2017</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="col-sm-4 isotopeSelector africa asia">
+                        <article class="">
+                            <figure>
+                                <img src="/img/home/packages/packages-6.jpg" alt="">
+                                <h4>Jamarat</h4>
+                                <div class="overlay-background">
+                                    <div class="inner"></div>
+                                </div>
+
+                            </figure>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INQUIRY MODAL -->
+        <div class="modal fade bookingModal modalBook" id="inquiryModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Inquiry About Tour</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="#">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="yourName" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="yourEmail" placeholder="Your Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn buttonCustomPrimary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-12">
+                            <div class="footerContent">
+                                <a href="http://travelx.pk/" class="footer-logo"><img src="/img/logo-color-sm.png" alt="footer-logo"></a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-12">
+                            <div class="footerContent">
+                                <h5>contact us</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fa fa-home" aria-hidden="true"></i>61 Park Street, Fifth Avenue, NY</li>
+                                    <li><i class="fa fa-phone" aria-hidden="true"></i>[88] 657 524 332</li>
+                                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailTo:info@travelx.pk">info@travelx.pk</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-12">
+                            <div class="footerContent imgGallery">
+                                <h5>Gallery</h5>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <a class="fancybox-pop" href="/img/home/gallery/gallery-1.jpg"><img src="/img/home/gallery/thumb-gallery-1.jpg" alt="image"></a>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <a class="fancybox-pop" href="/img/home/gallery/gallery-2.jpg"><img src="/img/home/gallery/thumb-gallery-2.jpg" alt="image"></a>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <a class="fancybox-pop" href="/img/home/gallery/gallery-3.jpg"><img src="/img/home/gallery/thumb-gallery-3.jpg" alt="image"></a>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <a class="fancybox-pop" href="/img/home/gallery/gallery-4.jpg"><img src="/img/home/gallery/thumb-gallery-4.jpg" alt="image"></a>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <a class="fancybox-pop" href="/img/home/gallery/gallery-5.jpg"><img src="/img/home/gallery/thumb-gallery-5.jpg" alt="image"></a>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <a class="fancybox-pop" href="/img/home/gallery/gallery-6.jpg"><img src="/img/home/gallery/thumb-gallery-6.jpg" alt="image"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-12">
+                            <div class="footerContent">
+                                <h5>newsletter</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do. </p>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter your email" aria-describedby="basic-addon21">
+                                    <span class="input-group-addon" id="basic-addon21"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+                                </div>
+                                <ul class="list-inline">
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyRight clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-push-6 col-xs-12">
+                            <ul class="list-inline">
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Support</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-sm-pull-6 col-xs-12">
+                            <div class="copyRightText">
+                                <p>Copyright © 2016. All Rights Reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Signup Modal -->
+    <div class="modal fade signupLoging" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modalContentCustom">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Create your account</h4>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="">
+                        <div class="form-group">
+                            <input type="text" class="form-control bg-ash" id="exampleInputEmail1" placeholder="Full Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control bg-ash" id="exampleInputPassword1" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control bg-ash" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> I agree to the terms of use and privacy.
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-default">Login</button>
+                    </form>
+                    <div class="or">
+                        or
+                    </div>
+                    <a class="btn btn-default btnSocial" href="#">Log in with facebook</a>
+                </div>
+                <div class="modal-footer">
+                    <div class="dontHaveAccount">
+                        <p>Don’t have an Account?<a href=""> Sign up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login Modal -->
+    <div class="modal fade signupLoging" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modalContentCustom">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Log in to your account</h4>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="">
+                        <div class="form-group">
+                            <input type="email" class="form-control bg-ash" id="exampleInputPassword1" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control bg-ash" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember me
+                            </label>
+                            <a class="forgotPass clerfix" href="">Fogot Password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-default">Login</button>
+                    </form>
+                    <div class="or">
+                        or
+                    </div>
+                    <a class="btn btn-default btnSocial" href="#">Log in with facebook</a>
+                </div>
+                <div class="modal-footer">
+                    <div class="dontHaveAccount">
+                        <p>Don’t have an Account?<a href=""> Sign up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- JAVASCRIPTS -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="~/Content/PluginBootstrap/jquery-ui/jquery-ui.js"></script>
+    <script src="~/Content/PluginBootstrap/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Content/PluginBootstrap/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script src="~/Content/PluginBootstrap/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="~/Content/PluginBootstrap/selectbox/jquery.selectbox-0.1.3.min.js"></script>
+    <script src="~/Content/PluginBootstrap/datepicker/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="~/Content/PluginBootstrap/counter-up/jquery.counterup.min.js"></script>
+    <script src="~/Content/PluginBootstrap/isotope/isotope.min.js"></script>
+    <script src="~/Content/PluginBootstrap/isotope/jquery.fancybox.pack.js"></script>
+    <script src="~/Content/PluginBootstrap/isotope/isotope-triger.js"></script>
+    <script src="~/Content/PluginBootstrap/countdown/jquery.syotimer.js"></script>
+    <script src="~/SiteJs/custom.js"></script>
+</body>
+</html>

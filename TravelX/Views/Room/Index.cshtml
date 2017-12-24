@@ -1,0 +1,98 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="page-header">
+            Manage Rooms <small>Add Room</small>
+        </h1>
+    </div>
+</div>
+<!-- /. ROW  -->
+<div class="row">
+    <div class="col-md-12">
+        <!-- Advanced Tables -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Rooms
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <button type="button" class="btn btn-default" onclick="window.location='add_rooms.html'">Add New</button>
+                        <hr>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>Hotel</th>
+                                <th>Room Type</th>
+                                <th>Agent</th>
+                                <th>Phone</th>
+                                <th>Price</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="even gradeX">
+                                <td>1</td>
+                                <td>a12112dmin</td>
+                                <td>admin</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="center"><a href="#">Edit</a> | <a href="#" onclick="return confirm('Are you sure to delete this record?');">Delete</a></td>
+                            </tr>
+                            <tr class="odd gradeX">
+                                <td>4</td>
+                                <td>ab</td>
+                                <td>ab@12121.com</td>
+                                <td>123</td>
+                                <td>1221.com</td>
+                                <td></td>
+                                <td></td>
+                                <td class="center"><a href="#">Edit</a> | <a href="#" onclick="return confirm('Are you sure to delete this record?');">Delete</a></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <!--End Advanced Tables -->
+    </div>
+</div>
+
+<!-- /. WRAPPER  -->
+<!-- JS Scripts-->
+<!-- jQuery Js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Bootstrap Js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Metis Menu Js -->
+<script src="/AdminCssJs/js/jquery.metisMenu.js"></script>
+<!-- DATA TABLE SCRIPTS -->
+<script src="/AdminCssJs/js/jquery.dataTables.js"></script>
+<script src="/AdminCssJs/js/dataTables.bootstrap.js"></script>
+<script>
+		$(document).ready(function () {
+			$('#dataTables-example').dataTable();
+		});
+</script>
+<!-- DATE PICKER SCRIPTS -->
+<script src="/AdminCssJs/js/bootstrap-datepicker.js"></script>
+<script>
+		//var site_url = 'http://travelx.pk/';
+		$('.datepicker').datepicker({format:'yyyy-mm-dd', autoclose:true});
+</script>
+<!-- Custom Js -->
+<script src="/AdminCssJs/js/custom-scripts.js"></script>
