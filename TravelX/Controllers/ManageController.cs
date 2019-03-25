@@ -10,6 +10,7 @@ using TravelX.Models;
 
 namespace TravelX.Controllers
 {
+	//this tag used for authorization
     [Authorize]
     public class ManageController : Controller
     {
