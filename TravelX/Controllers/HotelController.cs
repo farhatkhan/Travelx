@@ -8,7 +8,7 @@ namespace TravelX.Controllers
 {
     public class HotelController : Controller
     {
-        // GET: Hotel
+        // GET: Hotel action method
         public ActionResult Index()
         {
             return View();
